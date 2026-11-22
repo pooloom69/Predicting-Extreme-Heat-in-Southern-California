@@ -1,0 +1,5 @@
+Target,Model,Threshold
+hot_day,Logistic Regression,0.8577117747678504
+hot_day,Random Forest,0.12
+hot_night,Logistic Regression,0.8864006187634951
+hot_night,Random Forest,0.16

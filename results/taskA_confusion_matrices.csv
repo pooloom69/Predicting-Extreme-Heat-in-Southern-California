@@ -1,0 +1,5 @@
+Target,Model,TN,FP,FN,TP
+Extreme heat days,Logistic Regression,7887,419,256,375
+Extreme heat days,Random Forest,7684,622,226,405
+Extreme heat nights,Logistic Regression,7498,430,185,824
+Extreme heat nights,Random Forest,7107,821,107,902

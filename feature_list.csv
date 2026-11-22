@@ -1,0 +1,26 @@
+file,column,role,description,unit,source
+TaskA_features.csv,STATION,id,NOAA station ID (merged stations joined with +),,raw
+TaskA_features.csv,station,id,Short station name,,raw
+TaskA_features.csv,DATE,id,Date,YYYY-MM-DD,raw
+TaskA_features.csv,year,id,Calendar year,year,DATE
+TaskA_features.csv,tmin_lag1,feature,Low temperature the day before,°C,TMIN
+TaskA_features.csv,dtr_lag1,feature,High minus low temperature the day before,°C,"TMAX, TMIN"
+TaskA_features.csv,dayOfYear,feature,"Day number counted from January 1 (May 1 = 121, Oct 31 = 304; one day later in leap years)",day,DATE
+TaskA_features.csv,days_since_rain,feature,Days since the last day with 1 mm or more of rain,days,PRCP
+TaskA_features.csv,oni_lag,feature,ONI of the 3 months that ended the month before,°C anomaly,ONI v6
+TaskA_features.csv,prcp_sum30,feature,Total rain over the past 30 days,mm,PRCP
+TaskA_features.csv,prcp_lag1,feature,Rain the day before,mm,PRCP
+TaskA_features.csv,station_code,feature,"Station label (0 = LAX, 1 = LA_Downtown, 2 = Santa_Ana, 3 = Riverside, 4 = Palm_Springs). Category, not a quantity: use 0/1 columns for Logistic / Linear Regression",code,STATION
+TaskA_features.csv,hot_day,answer,1 if the high is above the station 95th percentile threshold,0/1,TMAX
+TaskA_features.csv,hot_night,answer,1 if the low is above the station 95th percentile threshold,0/1,TMIN
+TaskB_features.csv,STATION,id,NOAA station ID (merged stations joined with +),,raw
+TaskB_features.csv,station,id,Short station name,,raw
+TaskB_features.csv,coverage,id,Share of May–October days with both high and low temperature,fraction,"TMAX, TMIN"
+TaskB_features.csv,prev_hot_nights,feature,Extreme heat nights last year,nights,TMIN
+TaskB_features.csv,year,feature,Calendar year,year,DATE
+TaskB_features.csv,prev_mean_tmin,feature,Average May–October low temperature last year,°C,TMIN
+TaskB_features.csv,avg5_hot_days,feature,Average extreme heat days over the past 5 years,days,TMAX
+TaskB_features.csv,prev_max_spell_days,feature,Longest run of extreme heat days last year,days,TMAX
+TaskB_features.csv,station_code,feature,"Station label (0 = LAX, 1 = LA_Downtown, 2 = Santa_Ana, 3 = Riverside, 4 = Palm_Springs). Category, not a quantity: use 0/1 columns for Logistic / Linear Regression",code,STATION
+TaskB_features.csv,hot_day_count,answer,Extreme heat days from May to October this year,days,TMAX
+TaskB_features.csv,hot_night_count,answer,Extreme heat nights from May to October this year,nights,TMIN
